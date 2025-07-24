@@ -1,0 +1,81 @@
+version: '3.8'
+
+services:
+  onsite3:
+    build:
+      context: .
+      dockerfile: dockerfile
+    ports:
+      - "8080:80"
+
+  cse1:
+    build:
+      context: python-server
+      dockerfile: dockerfile
+    environment:
+      - PORT=8081
+      - DEPT=CSE1
+
+  cse2:
+    build:
+      context: python-server
+      dockerfile: dockerfile
+    environment:
+      - PORT=8082
+      - DEPT=CSE2
+
+  cse3:
+    build:
+      context: python-server
+      dockerfile: dockerfile
+    environment:
+      - PORT=8083
+      - DEPT=CSE3
+
+  eee1:
+    build:
+      context: python-server
+      dockerfile: dockerfile
+    environment:
+      - PORT=8084
+      - DEPT=EEE1
+
+  eee2:
+    build:
+      context: python-server
+      dockerfile: dockerfile
+    environment:
+      - PORT=8085
+      - DEPT=EEE2
+
+  eee3:
+    build:
+      context: python-server
+      dockerfile: dockerfile
+    environment:
+      - PORT=8086
+      - DEPT=EEE3
+
+  mech1:
+    build:
+      context: python-server
+      dockerfile: dockerfile
+    environment:
+      - PORT=8087
+      - DEPT=MECH1
+
+  mech2:
+    build:
+      context: python-server
+      dockerfile: dockerfile
+    environment:
+      - PORT=8088
+      - DEPT=MECH2
+
+  mech3:
+    build:
+      context: python-server
+      dockerfile: dockerfile
+    environment:
+      - PORT=8089
+      - DEPT=MECH3
